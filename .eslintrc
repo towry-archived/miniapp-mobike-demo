@@ -1,0 +1,11 @@
+{
+  "env": {
+    "es6": true,
+    "commonjs": true
+  },
+  "globals":{
+    "wx": true,
+    "getApp": true,
+    "__DEV__": true
+  }
+}
