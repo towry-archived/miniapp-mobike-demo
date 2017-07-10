@@ -1,0 +1,51 @@
+/* payment.wxss */
+@import "../common.wxss";
+
+page {
+  background-color: #F0EFF5;
+}
+
+.money-image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+
+.money-image {
+  float: left;
+}
+
+.payment-balance {
+  overflow: hidden;
+  padding-left: 30rpx;
+}
+
+.payment-info {
+  line-height: 2;
+}
+
+.payment-balance-info {
+  line-height: 1.8;
+}
+
+.payment-balance-num {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.payment-select-btn {
+  flex-basis: 46%;
+  flex-grow: 0;
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.payment-select-btn:last-child {
+  margin-bottom: 0;
+}
+
+.agreement {
+  display: inline;
+  color: green;
+}

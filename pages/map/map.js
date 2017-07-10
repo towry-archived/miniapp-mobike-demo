@@ -178,6 +178,10 @@ Page({
       case kControls.resumePos.id:
         this.moveToCurrentLocation()
         break;
+      case kControls.money.id:
+        wx.navigateTo({
+          url: '/pages/payment/payment'
+        });
     }
   },
 

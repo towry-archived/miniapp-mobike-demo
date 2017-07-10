@@ -1,0 +1,67 @@
+
+page {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #A3A2A8;
+}
+
+.box,
+.card {
+  padding: 20rpx 36rpx;
+}
+
+.box::after,
+.card::after {
+  display: block;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+.card {
+  background-color: white;
+}
+
+/*
+  flex
+-------------------------------*/
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+
+/*
+ Utilize
+-------------------------------*/
+.text-stress {
+  color: #333;
+  font-size: 14px;
+}
+
+.highlight {
+  color: #33A629;
+}
+
+.block {
+  display: block;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: #F2F2F2;
+  margin: 10rpx 0;
+}

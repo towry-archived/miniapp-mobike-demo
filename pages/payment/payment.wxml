@@ -1,0 +1,45 @@
+<!--payment.wxml-->
+<view class="payment-page">
+  <view class="card">
+    <image class="money-image" mode="aspectFit" src="/assets/money.png"></image>
+    <view class="payment-balance">
+      <text class="text-stress block payment-balance-num">$4.50</text>
+      <text class="payment-balance-info">车费余额</text>
+      <view class="separator"></view>
+      <text class="highlight payment-info">您的月卡还可以继续使用365天</text>
+    </view>
+  </view>
+
+  <view class="box" style="padding-top: 40rpx; padding-bottom: 40rpx;">
+    <text class="text-stress" style="margin-right: 20rpx; font-size: 12px;">充值金额</text>
+    <text>(如已领取微信支付立减金, 支付时自动使用)</text>
+  </view>
+
+  <view class="card flex flex-wrap"
+    style="justify-content: space-between; padding-top: 60rpx; padding-bottom: 60rpx;">
+    <block wx:for="{{ paymentBtns }}" wx:key="{{ index }}">
+      <button
+        type="primary"
+        data-amount="{{ item }}"
+        plain="{{ item === selectedAmount ? false : true }}"
+        size="default"
+        class="payment-select-btn flex-item"
+        bindtap="onbtnClick"
+        hover-class="other-button-hover">${{ item }}</button>
+    </block>
+  </view>
+
+  <view class="box">
+    <view style="text-align: center">
+      <view style="margin: 30rpx 0;">
+        <text>点击去充值, 即表示已阅读并同意</text>
+        <navigator
+          class="agreement"
+          url="/pages/map/map?title=abc"><text>{{ "«" }}充值协议{{ "»" }}</text> </navigator>
+        <text>\n</text>
+        <text>MobikeDemo不会以任何形式要求您输入银行账户和密码</text>
+      </view>
+      <button type="primary" size="default" bindtap="doPayment">去充值</button>
+    </view>
+  </view>
+</view>
